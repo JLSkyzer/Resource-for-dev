@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="header" id="myHeader">
+        <a class="navtitle" href="index.php"><h2>JLSkyzer's web</h2></a>
+        <div class="navbar">
+            <a class="basicbtn" href="index.php">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Tuto
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                <a href="#">Mcreator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Resources
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content"> 
+                <a href="#">Mcreator</a>
+                <a href="#">HTML / CSS</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .header {
+    /* background: #555; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 99.35%;
+    padding: 5px;
+    color: #f1f1f1;
+    min-height: 50px;
+    height: auto;
+    background-color: #333;
+    /* vertical align content */
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    /* Page content */
+    .content {
+        padding: 16px;
+    }
+    
+    /* The sticky class is added to the header with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%
+    }
+    
+    /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+        padding-top: 102px;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        min-width: 300px;
+        width: auto;
+    }
+    .navbar a{
+        display: block;
+        width: 100px;
+        line-height: 50px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+    .navbar .basicbtn{
+        background-color: rgb(78, 150, 7);
+    }
+
+    .navbar a:hover{
+        transition: 0.2s;
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+
+    /* Dropdown menu */
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        line-height: 50px;
+    }
+    
+    /* Dropdown button */
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+    
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 0px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .navtitle{
+        text-decoration: none;
+        color: white;
+    }
+    </style>
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    var header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+</script>
+
+</body>
+</html>

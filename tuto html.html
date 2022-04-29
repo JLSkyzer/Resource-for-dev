@@ -1,0 +1,418 @@
+Avant de commencer le site, il va falloir importer le fichier.css et mettre le en utf8 pour avoir des à, é etc... -->
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Le titre de l'onglet</title>
+</head>
+
+<!-- pour crée un gros texte de titre: -->
+
+	<h1>
+		Bienvenue !
+	</h1>
+
+<!-- Pour crée un paragraphe: -->
+
+	<p>
+		Bienvenue Sur Le Site "NONE" n'hésite pas a venir nous aider !
+	</p>
+
+<!-- Pour crée un paragraphe avec une class precise: -->
+
+	<p class="class name">
+		Bienvenue Sur Le Site "NONE" n'hésite pas a venir nous aider !
+	</p>
+
+<!-- Pour crée un texte relié a un lien: -->
+
+	<a href="http://google.com">Va sur Google !</a>
+
+<!-- On peut aussi redirigé vers un autre fichier: -->
+
+	<a href="page2.html">La page 2 !</a>
+
+<!-- On peut aussi descendre la page a un texte ou autre precis -->
+
+	<a href="#cuisine">La cuisine !</a>
+
+	<!-- Cela va vous dirigez vers le paragraphe ou autre avec id="#cuisine" -->
+
+<!-- Pour crée un texte relié a un lien (ouvre sur une autre page): -->
+
+	<a href="http://google.com" target="_BLANK">Va sur Google !</a>
+
+<!-- On peut aussi telecharger des fichier ! -->
+
+	<a href="fichier.zip">Telecharger le fichier</a>
+
+<!-- Pour mettre le uht-8 sur votre site: -->
+
+	<title>Mon Site</title>
+	<meta charset="utf-8">
+
+	<!-- (en dessous du titre) -->
+
+<!-- pour mettre une barre de navigation:
+
+nav = navigation
+ul = stockage des puces
+li = puces -->
+
+	<nav>
+		<ul>
+			<li>
+				<a href="#">
+					Acceuil
+				</a>
+			</li>
+			<li>
+				<a href="news.html">
+					Actualités
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Contact
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+<!-- pour mettre une image -->
+
+<img src="img/logo-test.png" alt="le logo" width="100" height="100">
+	<!-- Le "alt" set pour les aveugles pous qu'il savent a quoi il touche -->
+
+
+<!-- Pour sauter une ligne dans une balise: -->
+
+<br />
+
+<!-- <ul> = un stockage de puce  -->
+	<!-- et dans le <ul> on va mettre des puces <li>. exemple -->
+
+<body>
+	<ul>
+		<li>Fraises</li>
+		<li>Framboise</li>
+		<li>Cerises</li>
+	</ul>
+</body>
+
+<!-- Ce qui donne -->
+
+• Fraises
+• Framboise
+• Cerises
+
+<!-- Sinon, on a aussi les stockage de puces "<ol>" exemple -->
+
+<body>
+	<ol>
+		<li>Fraises</li>
+		<li>Framboise</li>
+		<li>Cerises</li>
+	</ol>
+</body>
+
+<!-- Ce qui donne -->
+
+1. Fraises
+2. Framboise
+3. Cerises
+
+<!-- On peut aussi mettre un ou plusieurs mot en valeur dans une phrase -->
+
+<em></em> = italic
+<strong></strong> = en gras
+<mark></mark> = surligné
+
+<!-- Pour mettre une légende a une image il faut crée une figure avec a l'interieure: l'image + la figcaption -->
+
+<figure>
+	<img src="img/Kelax_logo.png" alt="Le logo" />
+	<figcaption>Le logo du serveur</figcaption>
+</figure>
+
+<!-- Vous avez les class et les id -->
+
+class = on peut avoir plusieurs choses avec le meme nom de class
+
+id = on peut avoir qu'une seul choses avec le nom de l'id
+
+<!-- La balise span -->
+
+<p>Je <span id="intro">suis</span> Killian</p>
+
+<!-- Sur le fichier css, on pourra mettre juste le mot "suis" en ce que l'on veut -->
+
+<!-- La balise div -->
+
+<div class="MdrTKi">
+	<p class="LolClass">Lol</p>
+	<img src="img/Kelax_logo_mini.png">
+	<p>Mdrrrr</p>
+</div>
+
+<!-- Pour crée une section -->
+
+<section></section>
+
+<!-- Pour crée un aside -->
+
+<aside></aside>
+
+<!-- Pour crée un article -->
+
+<article></article>
+
+<!-- On peut faire -->
+
+<section>
+	<aside>
+		<h1>Le titre</h1>
+		<p>blabla le texte</p>
+	</aside>
+	<article>
+		<h1>le titre de l'article</h1>
+		<p>bla bla bla le pourquoi du comment</p>
+	</article>
+</section>
+
+<!-- Un barre de navigation deja prete (voir tuto css pour avoir la config pour le css) -->
+
+	<nav class="navi">
+		<ul class="nav">
+			<li><a href="#">Acceuil</a></li>
+			<li><a href="#"></a>Blog</li>
+			<li><a href="#"></a>Nous rejoindre</li>
+		</ul>
+	</nav>
+
+<!-- Voici le code d'une section deja faite (voir tuto css pour avoir le design avec)-->
+
+	<section class="section-1">
+		<aside class="haut-gauche">
+			<h1>A propos du serveur</h1>
+			<p>KelaxFaction est un serveur pvp faction modddé crée par JLStrykerz_2_0</p>
+		</aside>
+		<article class="haut-droite">
+			<img src="img/kelax_logo_mini.png" alt="le logo du serveur">
+			<p>Le logo du serveur</p>
+		</article>
+		<aside class="bas-gauche">
+			<p>blablablablablabla blablablablablabla blablablablablabla blablablablablabla blablablabla <br />
+			blablablabla blablav blabla</p>
+		</aside>
+		<article class="bas-droite">
+			<p>blablablablablabla blablablablablabla blablablablablabla blablablablablabla blablablabla <br />
+			blablablabla blablav blabla</p>
+		</article>
+	</section>
+
+<!-- Pour crée un tableau -->
+
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+<!-- Exemple de tableau -->
+
+	<table>
+		<tr>
+			<td>Jours</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Lundi</td>
+			<td>1.600€</td>
+		</tr>
+	</table>
+
+<!-- Pour crée un entête de tableau -->
+
+	<table>
+		<tr>
+			<th>Nom</th>
+			<th>âge</th>
+			<th>Pays</th>
+		</tr>
+		<tr>
+			<td>Killian</td>
+			<td>16 ans</td>
+			<td>France</td>
+		</tr>
+	</table>
+
+<!-- Petit exemple de tete de tableau (tete-tableau.png) -->
+
+<!-- Pour crée un titre au dessus du tableau -->
+
+	<table>
+		<caption>Le Titre du tableau</caption>
+		<tr>
+			<th>Nom</th>
+			<th>âge</th>
+			<th>Pays</th>
+		</tr>
+		<tr>
+			<td>Killian</td>
+			<td>16 ans</td>
+			<td>France</td>
+		</tr>
+	</table>
+
+<!-- Crée un formulaire -->
+
+<!-- Pour crée un formulaire, écrivez ceci -->
+
+	<form>
+	</form>
+
+<!-- Il va falloi mettre une methode a notre puce -->
+
+<!-- A 99% du temps, on utilise la method post -->
+
+<form method="post">
+	
+</form>
+
+<!-- et aussi une action pour enregistrer le formulaire -->
+
+<form method="post" action="file.php">
+	
+</form>
+
+<!-- Voici toute les puces qui vous seront utile -->
+
+<form method="post" action="file.php">
+	
+	<p>
+		<label for="pseudo">Votre pseudo</label>
+		<input type="text" name="pseudo" id="pseudo"> <!-- une zone de texte -->
+
+		<input type="password" name="Mot de passe"> <!-- Un champs de texte pour mot de passe -->
+
+		<textarea rows="5" cols="100">Le texte</textarea>
+		<!-- rows = Colone / Cols = taille en longueur -->
+
+		<input type="email" name="email">
+		<input type="url" name="url">
+		<input type="tel" name="telephone">
+		<input type="number" name="age">
+		<!-- Vous pouvez ajouter les atributs:
+		- min
+		- max
+		- (pour savoir de cb en cb il avance) -->
+		<input type="range" name="age">
+		<input type="color" name="prenez une couleur">
+		<input type="date" name="Date de naissance">
+		<input type="search" name="Barre de recherche">
+		<input type="checkbox" name="Checkboard">
+		<!-- Mettre l'atribut (checked) pour qu'il soit deja coché -->
+		<input type="radio" name="age">
+		<!-- La radio permet de choisir que un seul choix dans un groupe. Pour cela il suffit juste de leur donner la meme valeur a "name" -->
+
+		<!-- On peut aussi faire un cadre déroulant -->
+
+		<label for="pays">Dans quel pays habiter vous</label><br />
+		<select name="pays" id="pays">
+			<option value="france">France</option>
+			<option>Espagne</option>
+		</select>
+		<!-- on a l'attribut "selected" -->
+
+		<!-- Pour crée un boutton -->
+
+	<button class="favorite styled" type="button">
+    	Add to favorites
+	</button>
+	</p>
+
+	<!-- Pour mettre le formulaire dans un cadre -->
+
+	<fieldset>
+		<legend>Vos infos</legend>
+
+		<p>
+			<label for="pseudo">Votre pseudo</label>
+			<input type="text" name="pseudo" id="pseudo">
+		</p>
+
+		<p>
+			<label for="mdp">Votre Mot de passe</label>
+			<input type="password" name="mdp" id="mdp">
+		</p>
+
+		<p>
+			<label for="email">Votre Mot de passe</label>
+			<input type="email" name="email" id="email">
+		</p>
+
+		<input type="submit" name="Envoyer">
+	</fieldset>
+
+<input type="password" name="mdp" id="mdp" required>
+<!-- L'attribut required sert a obliger la personne a mettre une valeur -->
+
+</form>
+
+<!-- Les attribut qui vous seront utile -->
+
+maxlength="10" <!-- Charactere maxi -->
+value="Pseudo" <!-- Valeur deja marqué -->
+
+
+<!-- Pour  mettre un son-->
+
+<audio src="test.mp3" controls >
+</audio>
+
+<!-- L'attribut controls permet de pouvoir manipuler le son -->
+
+<!-- Pour mettre une video -->
+
+<video src="video.mp4" controls poster="minia.png" width="" height=""></video>
+
+<!-- Pour mettre un code dans le site -->
+
+<script>
+	window.addEventListener('load', function () {
+	  console.log('Cette fonction est exécutée une fois quand la page est chargée.');
+	});
+</script>
+
+<!-- Exemple de code js -->
+
+<p>
+	<script type="text/javascript" lang="Javascript" src="js.js">
+		
+		document.write("nombre de chat: "+ nombreDeChats + "<br />");
+		document.write("nombre de chien: "+ nombreDeChien + "<br />");
+		document.write("nombre d'animaux: "+ nombreAnimaux);
+	</script> 
+</p>
+
+<!-- Pour import un fichier js -->
+
+<script src="js.js"></script>
+
+<!-- IMPORTANT: IL faut le mettre dans les balise ou vous voulez qu'il execute -->
+
+<!-- Pour mettre du code php dans une page html -->
+
+<?php Code ?>
+
+<!-- Crée du référencement -->
+
+<meta name="keywords" content="les, mots clé, a mettre">
+<meta name="description" content="les mots clé a mettres">
+<!-- Il y a aussi les title et les h1 au début des pages -->

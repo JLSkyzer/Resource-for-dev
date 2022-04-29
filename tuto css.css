@@ -1,0 +1,650 @@
+/*Pour mettre un paragraphe en couleur:*/
+
+p
+{
+	color: blue;
+	font-weight: bold; /*Le texte sera en gras*/
+}
+
+/*Pour changer la taille d'un texte*/
+
+font-size
+
+/*Pour mettre une couleur sur un paragraphe avec une classe*/
+
+p.nomdelaclass
+{
+	color: blue;
+}
+
+/*ca mettera le paragraphe <p class:"nomdelaclass">paragraphe</p> en bleu*/
+
+/*Pour crée un un texte qui contourne une image, il faut mettre une class sur l'image est ecire le code si dessous:*/
+
+.classImg
+{
+	float: left; /*left ou right*/
+}
+
+/*Imaginons vous avez 2 paragraphe, vous voulez que seul le premier paragraphe contourne l'image, et que le deuxieme soit en dessous de l'image. il va falloir mettre une class au deuxieme paragraphe et faire le code si dessous*/
+
+.autreparagraphe
+{
+	clear: left;
+}
+
+/*Il va annuler le float a gauche.*/
+
+/*Pour eviter qu'un background se repete, il va falloir désactiver le repeat:*/
+
+body
+{
+	background-repeat: no-repeat;
+}
+
+/*Pour faire les bordures*/
+
+h1
+{
+	border: 3px blue solid;
+}
+
+/*Mais il y a aussi*/
+
+h1
+{
+	border-left: ;
+	border-bottom: ;
+	border-right: ;
+	border-top: ;
+}
+
+/*Pour arrondir les bordures*/
+
+h1
+{
+	border-radius: 20px;
+		/*Ou*/
+	border-radius: 20px / 10px;
+}
+
+/*Pour les ombres:*/
+
+/*box-shadow <alongement horizontale en px> <alongement verticale e px> <adoucicement du dégradé en px> <couleur>*/
+
+box-shadow: 6px 6px 0px black;
+
+/*Il y a aussi le texte-shadow*/
+
+/*On peut aussi changer la couleur d'une chose quand on survole dessus avec la souris*/
+
+a:hover
+{
+	color: green;
+}
+
+/*Ca marche pour toute les actions*/
+
+/*Pour changer la couleur d'un lien visité*/
+
+a:visited
+{
+	color: gray;
+}
+
+/*Pour centrer une image*/
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	/*Ou sinon vous la mettez dans une figure et vous ecrivez*/
+
+figure
+{
+	text-align: center;
+}
+
+/*Pour changer la position d'une liste a puce*/
+
+	display: list-item;
+	padding-left: 40%;
+
+/*Pour mettre une font personnalisée*/
+
+@font-face {
+	font-family: "Ma Super Fonte";
+	src: url('MaSuperFonte-Regular.ttf');
+}
+@font-face {
+	font-family: "Ma Super Fonte";
+	font-style: italic;
+	src: url('MaSuperFonte-Italic.ttf');
+}
+@font-face {
+	font-family: "Ma Super Fonte";
+	font-weight: bold;
+	src: url('MaSuperFonte-Bold.ttf');
+}
+
+/*Et pour la mettre a un texte*/
+
+body {
+	font-family: "Ma Super Fonte", Helvetica, Arial, sans-serif;
+}
+
+/*Pour centrer une liste a puce: (il faut la mettre dans une figure)*/
+
+figure.compétences
+{
+	display: inline-block;
+	text-align: center;
+	margin-left: 30%
+}
+
+/*Pour mettre une image en background*/
+
+background-image: url("../img/fonddecrt_3.jpg");
+
+/*Pour pas que l'image se repete au cas ou*/
+
+background-repeat: no-repeat;
+
+/*Si l'image est petite, voici le code pour que l'image prend tout l'ecran*/
+
+ /* Fixe l'image en haut à gauche de la page */
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ /* Préserve le ratio de l'image */
+ min-width: 100%;
+ min-height: 100%;
+
+ /*a quoi sert le code si dessous*/
+ min-widht / height
+
+ /*ce code sert a par exemple, pour que un texte prend 50% de la page mais que il est une largeure minimal de la valeur qu'on met exemple de code:*/
+
+p
+{
+	width: 50%;
+	min-width: 400px;
+}
+
+/*Les margin et padding:*/
+
+/*Margin = marge exterieure = espace entre chaque block par exemble*/
+
+/*padding = marge interieure = espace entre la bordure d'un block par rapport au texte*/
+
+/*Vous pouvez aussi mettre le padding ou le margin en auto pour qu'il soit au milieu automatiquement*/
+
+p
+{
+	margin: auto;
+}
+
+/*Attention: il faut mettre une taille (width et height) au block pour qu'il soit automatiquement mis au milieu 
+par ce que le systeme doit calculer le taille du block pour savoir a combier il doit le mettre pour qu'il soit au milieu*/
+
+/*Voici le code si le texte depasse le block*/
+
+p
+{
+	overflow: visible; /*Le texte depassera le cadre*/
+	overflow: hidden; /*Le texte qui dessais le cadre sera enlever / couper pour ce qui prefere*/
+	overflow: scroll; /*Le cadre aura une barre de defilement*/
+	overflow: auto; /*Le systeme va decider automatiquement ce qu'il va faire*/
+}
+
+/* Scroll Bar Carré */
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+/*Un scroll bar arrondi custom*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+
+ /*Si un lien depasse le cadre, voici le code a mettre*/
+
+ word-wrap: break-word;
+
+ /*Pour changer la taille d'une border:*/
+
+ width: 25%;
+
+ /*Enlever les points d'une liste:*/
+
+ list-style: none;
+
+ /*Une bonne barre de navigation horizontal*/
+
+nav.navi
+{
+	display: block;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+}
+
+nav.navi ul.nav
+{
+	list-style-type:none;
+	margin-top: 50px;
+}
+
+ul.nav li
+{
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	list-style-type:none;
+	background-color: white;
+	line-height: 30px;
+}
+
+/*Voici le design du code de la section dans tuto html*/
+
+section.section-1
+{
+	background-color: white;
+	height: 400px;
+	width: 350px;
+	margin-left: 70%;
+	margin-bottom: 20px;
+}
+
+aside.haut-gauche
+{
+	width: 170px;
+	height: 200px;
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	border: 3px solid black;
+}
+
+article.haut-droite
+{
+	margin-left: 175px;
+	height: 200px;
+	vertical-align: top;
+	border: 3px solid black;
+	width: 170px;
+}
+
+aside.bas-gauche
+{
+	width: 170px;
+	height: 190px;
+	display: inline-block;
+	border: 3px solid black;
+	vertical-align: bottom;
+	float: left;
+}
+
+article.bas-droite
+{
+	margin-left: 175px;
+	height: 190px;
+	vertical-align: bottom;
+	width: 170px;
+	border: 3px solid black;
+}
+
+/*Background image avec zero probleme*/
+
+body
+{
+	height: auto;
+	width: 100%;
+	background-image: url("../img/image.png");
+	background-color: gray;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+
+/*Les inline-block*/
+
+/*Pour cmmencer on lui donne ca propriété display*/
+
+nav
+{
+	display: inline-block;
+	/*Si vous texte est positionner vers le bas ou autre endroit, ecrivez ceci en dessous*/
+	vertical-align: top;
+}
+
+/*La position "absolute"*/
+
+/*Les charactéristique est qu'on peut le mettre partout*/
+
+nav
+{
+	position: absolute;
+	/*Vous pouvez le bouger comme ca*/
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	/*Le z-index*/
+	/*La choses qui a un z-index plus grande que les autres, il sera au dessus de tous*/
+	z-index: 5;
+}
+
+/*La position relative: La position relative sert a le bouger avec les padding etc...*/
+
+/* Pour mettre des bordure au tableaux */
+
+td /* Pour crée la bordure */
+{
+	border: 1px solid red;
+}
+
+table /* Pour coller les bordures */
+{
+	border-collapse: collapse;
+}
+
+/* Crée une barre coloré */
+
+div
+{
+	display: table;
+	background-color: rgba(67, 67, 66, .40);
+	color: blue;
+	text-align: center;
+	top: 0;
+  	left: 0;
+  	height: 100px;
+  	width: 100%;
+}
+
+/* Pour enlever le soulignage des liens */
+
+a
+{
+	text-decoration: none;
+}
+
+/*Pour mettre vos block en colone*/
+
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Pour modifier l'espace entre chaque bloc
+
+Voir justify_content.png*/
+
+#conteneur
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Pour aligner un text dans un cadre */
+
+div.test
+{
+	line-height: 50px;
+}
+
+/* Bouton parfait */
+
+div.exit-btn a
+{
+	display: block;
+	text-decoration: none;
+	color: white;
+	height: 50px;
+	width: 150px;
+	background-color: gray;
+	text-align: center;
+	line-height: 50px;
+}
+
+div.exit-btn a:hover
+{
+	background-color: black;
+	transition: 0.7s;
+}
+
+/* Alligner un text verticalement */
+
+vertical-align: middle;
+
+/* Navigation en div */
+
+div.navi a
+{
+	display: block;
+	text-decoration: none;
+	color: black;
+	height: 50px;
+	width: 150px;
+	background-color: rgb(0, 102, 109);
+	text-align: center;
+	line-height: 50px;
+}
+
+div.navi a:hover
+{
+	background-color: black;
+	transition: 0.7s;
+}
+
+div.navi
+{
+	display: flex;
+	margin: 10px;
+	justify-content: space-around;
+	background-color: rgba(43, 43, 43, 0.60);
+}
+
+/* Audio style */
+
+audio::-webkit-media-controls-panel
+audio::-webkit-media-controls-mute-button
+audio::-webkit-media-controls-play-button
+audio::-webkit-media-controls-timeline-container
+audio::-webkit-media-controls-current-time-display
+audio::-webkit-media-controls-time-remaining-display
+audio::-webkit-media-controls-timeline
+audio::-webkit-media-controls-volume-slider-container
+audio::-webkit-media-controls-volume-slider
+audio::-webkit-media-controls-seek-back-button
+audio::-webkit-media-controls-seek-forward-button
+audio::-webkit-media-controls-fullscreen-button
+audio::-webkit-media-controls-rewind-button
+audio::-webkit-media-controls-return-to-realtime-button
+audio::-webkit-media-controls-toggle-closed-captions-button
+
+/* pour changer une image */
+
+#home img:hover
+{
+    content: url(../design/home_hover.png);
+    transition: 0.7s;
+}
+
+/* Modifier la couleur de selection */
+
+/* du texte sélectionné sera jaune sur fond rouge */
+::-moz-selection {
+	color: gold;
+	background-color: red;
+  }
+  
+  ::selection {
+	color: gold;
+	background-color: red;
+  }
+  
+  /* le texte sélectionné dans un paragraphe */
+  /* sera blanc sur noir                     */
+  p::-moz-selection {
+	color: white;
+	background-color: black;
+  }
+  
+  p::selection {
+	color: white;
+	background-color: black;
+  }
+
+  /*Crée une animation*/
+
+  @-webkit-keyframes channelHover{
+    0%{
+        color: #ececec;
+    }
+    100%{
+        color: #b85353;
+    }
+}
+
+.channelName-2YrOjO:hover{
+    animation-duration: 0.55s;
+    -moz-animation-duration: 0.55s;
+    animation-name: channelHover;
+    color: #b85353;
+}
+
+/* Enlever la selection de texte */
+
+.content{
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+
+/* Animation de slide */
+
+.toxp, .craft{
+    height: 100px;
+    width: 300px;
+    /* margin-left: -300px;
+    margin-right: -300px; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.toxp{
+    /* animation-duration: 0.55s;
+    -moz-animation-duration: 0.55s;
+    animation-name: start;
+    color: #b85353; */
+    animation: start .55s ease-in;
+}
+.craft{
+    animation: start1 .55s ease-in;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@-webkit-keyframes start{
+    0%{
+        /* margin-left: -300px;
+        margin-right: -300px; */
+        /* overflow-x: -300px; */
+        transform: skew(53deg) translateX(-500px);
+        opacity: 0%;
+    }
+    100%{
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* overflow-x: 300px; */
+        transform: skew(0deg);
+        opacity: 100%;
+    }
+}
+@-webkit-keyframes start1{
+    0%{
+        /* margin-left: -300px;
+        margin-right: -300px; */
+        /* overflow-x: -300px; */
+        transform: skew(-53deg) translateX(500px);
+        opacity: 0%;
+    }
+    100%{
+        /* margin-left: auto;
+        margin-right: auto; */
+        /* overflow-x: 300px; */
+        transform: skew(0deg);
+        opacity: 100%;
+    }
+}
+
+
+<script type="text/javascript">
+alert("This alert box was called with the onload event");
+</script>
+
+<script type="text/javascript" src="path-to-javascript-file.js"></script>
+
+
+/* Déformer une image */
+transform: skew(0); /* normal */
+transform: skew(53deg); /* left */
+transform: skew(53deg) translateX(-500px); /* left */
+transform: skew(53deg) translateX(500px); /* right */
+transform: skew(53deg) translateY(-500px); /* top */
+transform: skew(53deg) translateY(500px); /* bottom */
+transform: skew(53deg) translateX(-500px) translateY(-500px); /* top left */
+transform: skew(53deg) translateX(-500px) translateY(500px); /* top right */
+transform: skew(53deg) translateX(500px) translateY(-500px); /* bottom left */
+transform: skew(53deg) translateX(500px) translateY(500px); /* bottom right */
+

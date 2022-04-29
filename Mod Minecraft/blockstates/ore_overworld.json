@@ -1,0 +1,6 @@
+{
+  "variants": {
+      "variant=tutorial": { "model": "erinaworld:ore_overworld_tutorial" },
+      "variant=copper": { "model": "erinaworld:ore_overworld_copper" }
+    }
+}
