@@ -1,0 +1,560 @@
+{
+  "info": {
+    "title": "Example Button",
+    "description": "",
+    "thumbnail": ""
+  },
+  "blocks": [
+    {
+      "name": "command_event",
+      "info": {
+        "x": 395,
+        "y": 23,
+        "z": 1,
+        "color": "#5a5a5a",
+        "height": 267,
+        "width": 759
+      },
+      "inputs": {
+        "command_name": "MGHwSS6AsF",
+        "custom_prefix": "TBZS22PqEg",
+        "command_slowmode": "ewe8BMTjwh"
+      },
+      "options": {
+        "command_restriction": "server_only",
+        "required_member_permission": "administrator",
+        "case_sensitive": "no",
+        "command_slowmode_restriction": "none"
+      },
+      "outputs": {
+        "action1": [
+          "E81P3mqaVv"
+        ],
+        "action2": [],
+        "message": [],
+        "channel": [
+          "b7Et2yvVnU",
+          "cfnBrrFYDo",
+          "sELVqBogYH"
+        ],
+        "user": [],
+        "error_message": []
+      }
+    },
+    {
+      "name": "text",
+      "info": {
+        "x": 36,
+        "y": 28,
+        "z": 2,
+        "color": "#5a5a5a",
+        "height": 118,
+        "width": 305
+      },
+      "options": {
+        "text": "testbtn"
+      },
+      "outputs": {
+        "text": [
+          "MGHwSS6AsF"
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "name": "text",
+      "info": {
+        "x": 2920,
+        "y": 408,
+        "z": 6,
+        "color": "#5a5a5a",
+        "height": 118,
+        "width": 305
+      },
+      "options": {
+        "text": "Ca marche pelo\n"
+      },
+      "outputs": {
+        "text": []
+      },
+      "inputs": {}
+    },
+    {
+      "name": "create_list",
+      "info": {
+        "x": 1228,
+        "y": 22,
+        "z": 7,
+        "color": "#5a5a5a",
+        "height": 113,
+        "width": 211
+      },
+      "inputs": {
+        "action": "E81P3mqaVv"
+      },
+      "outputs": {
+        "action": [
+          "NH2DJ24fCE"
+        ],
+        "list": [
+          "vkV0Ni3MRl"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "create_button",
+      "info": {
+        "x": 1537,
+        "y": 10,
+        "z": 8,
+        "color": "#5a5a5a",
+        "height": 268,
+        "width": 265
+      },
+      "inputs": {
+        "action": "NH2DJ24fCE",
+        "setStyle": "Ljzw57QbgG",
+        "setLabel": "W3eKcYIEcJ",
+        "setEmoji": "raZq7NM36W",
+        "setURL": "CbBtxkUeg2",
+        "setID": "RmZRJRjWKn",
+        "setDisabled": "JR4QxKeeed"
+      },
+      "outputs": {
+        "action": [
+          "lcDDndvfHW"
+        ],
+        "button": [
+          "wtbhbsG8WD"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "MOD_text_6x_number_3x",
+      "info": {
+        "x": 802,
+        "y": 296,
+        "z": 9,
+        "color": "#5a5a5a",
+        "height": 621,
+        "width": 348
+      },
+      "options": {
+        "text1": "red",
+        "text2": "purple",
+        "text3": "Bonjour",
+        "text4": "Qui suis-je ?",
+        "text5": "Tu veut quoi ?",
+        "text6": "",
+        "number1": "",
+        "number2": "",
+        "number3": ""
+      },
+      "outputs": {
+        "text1": [
+          "Ljzw57QbgG"
+        ],
+        "text2": [
+          "UfQES2w76k"
+        ],
+        "text3": [
+          "W3eKcYIEcJ"
+        ],
+        "text4": [
+          "rFnwObkpzC"
+        ],
+        "text5": [
+          "uctq8d2y5Z"
+        ],
+        "text6": [],
+        "number1": [],
+        "number2": [],
+        "number3": []
+      },
+      "inputs": {}
+    },
+    {
+      "name": "send_message_component",
+      "info": {
+        "x": 353,
+        "y": 737,
+        "z": 15,
+        "color": "#5a5a5a",
+        "height": 268,
+        "width": 280
+      },
+      "inputs": {
+        "action": "kiCyY7GA73",
+        "channel": "SI1Od3eWx5",
+        "text": "9NNRJfz6hL",
+        "embed": "umoMMzY7aR",
+        "attachment": "pENY8K7u47",
+        "buttons": "i9ttF6Isyg",
+        "split_message": "QOXDfS3Le5"
+      },
+      "outputs": {
+        "action": [],
+        "message": [],
+        "error": []
+      },
+      "options": {}
+    },
+    {
+      "name": "add_item_to_list",
+      "info": {
+        "x": 1193,
+        "y": 336,
+        "z": 16,
+        "color": "#5a5a5a",
+        "height": 196,
+        "width": 443
+      },
+      "inputs": {
+        "action": "lcDDndvfHW",
+        "list": "vkV0Ni3MRl",
+        "item": "wtbhbsG8WD",
+        "custom_position": "Ucx2kIj1Ll"
+      },
+      "options": {
+        "position_type": "last"
+      },
+      "outputs": {
+        "action": [
+          "PEl2azcwwB"
+        ],
+        "list": [
+          "8ocfv2Kxz1"
+        ]
+      }
+    },
+    {
+      "name": "create_button",
+      "info": {
+        "x": 1673,
+        "y": 338,
+        "z": 17,
+        "color": "#5a5a5a",
+        "height": 268,
+        "width": 265
+      },
+      "inputs": {
+        "action": "PEl2azcwwB",
+        "setStyle": "UfQES2w76k",
+        "setLabel": "rFnwObkpzC",
+        "setEmoji": "lGJRspt2Fh",
+        "setURL": "P84DsgIghF",
+        "setID": "S6XlLeN6zg",
+        "setDisabled": "QEmZy6ZHan"
+      },
+      "outputs": {
+        "action": [
+          "5hqLXMvHgb"
+        ],
+        "button": [
+          "WmdkEXLaIX"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "add_item_to_list",
+      "info": {
+        "x": 1201,
+        "y": 642,
+        "z": 18,
+        "color": "#5a5a5a",
+        "height": 196,
+        "width": 443
+      },
+      "inputs": {
+        "action": "5hqLXMvHgb",
+        "list": "8ocfv2Kxz1",
+        "item": "WmdkEXLaIX",
+        "custom_position": "df2o0Kaohs"
+      },
+      "options": {
+        "position_type": "last"
+      },
+      "outputs": {
+        "action": [
+          "sJgLFzSMo3"
+        ],
+        "list": [
+          "de6XU3LAbX"
+        ]
+      }
+    },
+    {
+      "name": "create_button_row",
+      "info": {
+        "x": 1849,
+        "y": 710,
+        "z": 19,
+        "color": "#5a5a5a",
+        "height": 113,
+        "width": 250
+      },
+      "inputs": {
+        "action": "sJgLFzSMo3",
+        "buttons": "de6XU3LAbX"
+      },
+      "outputs": {
+        "action": [
+          "HIaLppvezR"
+        ],
+        "buttonrow": [
+          "ZUWx9KcG3p"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "send_message_component",
+      "info": {
+        "x": 2340,
+        "y": 637,
+        "z": 20,
+        "color": "#5a5a5a",
+        "height": 268,
+        "width": 280
+      },
+      "inputs": {
+        "action": "HIaLppvezR",
+        "channel": "b7Et2yvVnU",
+        "text": "uctq8d2y5Z",
+        "embed": "C1tN6VoQLT",
+        "attachment": "xitNA6unPv",
+        "buttons": "ZUWx9KcG3p",
+        "split_message": "meoUJBG8Lu"
+      },
+      "outputs": {
+        "action": [
+          "5ZZeYoK3Ir"
+        ],
+        "message": [],
+        "error": [
+          "Ma4EXUh4eD"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "button_event",
+      "info": {
+        "x": 1389,
+        "y": 962,
+        "z": 23,
+        "color": "#5a5a5a",
+        "height": 206,
+        "width": 265
+      },
+      "inputs": {
+        "buttonid": "fdgiiSgvwC"
+      },
+      "outputs": {
+        "action": [
+          "EWiUvQOpJc"
+        ],
+        "user": [],
+        "member": [],
+        "message": [],
+        "button": [
+          "hLd7sQTSYl"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "text_4x",
+      "info": {
+        "x": 807,
+        "y": 924,
+        "z": 24,
+        "color": "#5a5a5a",
+        "height": 319,
+        "width": 318
+      },
+      "options": {
+        "text1": "Yo",
+        "text2": "Je suis le robot de JLSkyzer",
+        "text3": "1",
+        "text4": "2"
+      },
+      "outputs": {
+        "text1": [
+          "Q32LWjSpQN"
+        ],
+        "text2": [
+          "HJMD2NfQzF"
+        ],
+        "text3": [
+          "RmZRJRjWKn",
+          "fdgiiSgvwC"
+        ],
+        "text4": [
+          "S6XlLeN6zg",
+          "4O3k6Qkr2x"
+        ]
+      },
+      "inputs": {}
+    },
+    {
+      "name": "button_event",
+      "info": {
+        "x": 1388,
+        "y": 1191,
+        "z": 25,
+        "color": "#5a5a5a",
+        "height": 206,
+        "width": 265
+      },
+      "inputs": {
+        "buttonid": "4O3k6Qkr2x"
+      },
+      "outputs": {
+        "action": [
+          "IaYqd2Sl0G"
+        ],
+        "user": [],
+        "member": [],
+        "message": [],
+        "button": [
+          "Yj6s57fYSa"
+        ]
+      },
+      "options": {}
+    },
+    {
+      "name": "component_defering",
+      "info": {
+        "x": 1705,
+        "y": 978,
+        "z": 26,
+        "color": "#5a5a5a",
+        "height": 113,
+        "width": 250
+      },
+      "inputs": {
+        "action": "EWiUvQOpJc",
+        "component": "hLd7sQTSYl"
+      },
+      "outputs": {
+        "action": [
+          "wi8yN9Oe1C"
+        ],
+        "error": []
+      },
+      "options": {}
+    },
+    {
+      "name": "component_defering",
+      "info": {
+        "x": 1710,
+        "y": 1213,
+        "z": 27,
+        "color": "#5a5a5a",
+        "height": 113,
+        "width": 250
+      },
+      "inputs": {
+        "action": "IaYqd2Sl0G",
+        "component": "Yj6s57fYSa"
+      },
+      "outputs": {
+        "action": [
+          "UsZhfNPiyi"
+        ],
+        "error": []
+      },
+      "options": {}
+    },
+    {
+      "name": "send_message",
+      "info": {
+        "x": 2088,
+        "y": 942,
+        "z": 28,
+        "color": "#5a5a5a",
+        "height": 237,
+        "width": 280
+      },
+      "inputs": {
+        "action": "wi8yN9Oe1C",
+        "channel": "cfnBrrFYDo",
+        "text": "Q32LWjSpQN",
+        "embed": "fXRGmwIPjb",
+        "attachment": "16qaVIYdB8",
+        "split_message": "mES8nqyltN"
+      },
+      "outputs": {
+        "action": [],
+        "message": []
+      },
+      "options": {}
+    },
+    {
+      "name": "send_message",
+      "info": {
+        "x": 2094,
+        "y": 1198,
+        "z": 29,
+        "color": "#5a5a5a",
+        "height": 237,
+        "width": 280
+      },
+      "inputs": {
+        "action": "UsZhfNPiyi",
+        "channel": "sELVqBogYH",
+        "text": "HJMD2NfQzF",
+        "embed": "Pbvv13O7j7",
+        "attachment": "39Ej3Q4nmk",
+        "split_message": "46N4bBh5RR"
+      },
+      "outputs": {
+        "action": [],
+        "message": []
+      },
+      "options": {}
+    },
+    {
+      "name": "console_log",
+      "info": {
+        "x": 2642,
+        "y": 778,
+        "z": 30,
+        "color": "#5a5a5a",
+        "height": 113,
+        "width": 211
+      },
+      "inputs": {
+        "action": "5ZZeYoK3Ir",
+        "value": "Ma4EXUh4eD"
+      },
+      "outputs": {
+        "action": []
+      },
+      "options": {}
+    },
+    {
+      "name": "text",
+      "info": {
+        "x": 489,
+        "y": 329,
+        "z": 31,
+        "color": "#5a5a5a",
+        "height": 118,
+        "width": 305
+      },
+      "options": {
+        "text": "red"
+      },
+      "outputs": {
+        "text": []
+      },
+      "inputs": {}
+    }
+  ],
+  "notes": []
+}

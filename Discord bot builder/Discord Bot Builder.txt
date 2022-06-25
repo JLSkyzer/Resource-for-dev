@@ -1,0 +1,4 @@
+Scroll list : nom = menu
+Persistant variable = data
+
+Une fois le package button installer (voir le package.json) faite la commande dans le cmd : npm i discord-buttons@4.0.0
