@@ -5,6 +5,41 @@
 // ecrire "gradlew tasks"
 // ecrire "gradlew setupDecompWorkspace" puis "gradlew  eclipse"
 
+// Pour les version au dessus:
+// Il faut obliger gradle a utiliser Java 8
+/*
+Dans le build.gradle:
+	- supprimer les ligne 1-14
+	- replacer par
+	plugins {
+	    id 'eclipse'
+	    id 'maven-publish'
+	    id 'net.minecraftforge.gradle' version '5.1.+'
+	    id 'java'
+	    id 'wtf.gofancy.fancygradle' version '1.1.+'
+	}
+
+	java {
+	    toolchain {
+	        languageVersion = JavaLanguageVersion.of(8)
+	    }
+	}
+Dans le settings.gradle (le créer) :
+	pluginManagement {
+	    repositories {
+	        maven {
+	            name 'MinecraftForge'
+	            url 'https://maven.minecraftforge.net/'
+	        }
+	        maven {
+	            name 'FancyGradle'
+	            url 'https://gitlab.com/api/v4/projects/26758973/packages/maven'
+	        }
+	    }
+	}
+et dans le gradle/wrapper/gradle-wrapper.properties, replacer la version de gradle par 7.5
+*/
+
 // supprimer le com.example....
 // mettre votre package (fr.pseudo.truc)
 // Crée le Main.java
