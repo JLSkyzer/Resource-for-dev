@@ -105,4 +105,35 @@
 
 ?>
 
-<!-- Episode 3 terminé -->
+<!-- Pour avoir / envoyer des info a une table dans votre DB -->
+
+<form action="" method="post">
+        <input type="email" name="email" id="emailpost" placeholder="Votre email" required>
+        <input type="password" name="password" id="passwordpost" placeholder="Votre mot de passe" required>
+        <input type="submit" id="submit" name="submit">
+</form>
+
+    <?php
+        include 'database.php';
+        global $db;
+
+        // Prend les infos a partir de la table "user"
+        $q = $db->query("SELECT * FROM user");
+        while($user = $q->fetch()){
+            echo "id : " . $user['id'] . "<br/>";
+            echo "email : " . $user['email'] . "<br/><br/>";
+        }
+        $q = $db->prepare("INSERT INTO user(email,password) VALUES(:email,:password)");
+        // Envois des infos a la table
+        $q->execute([
+            'email' => 'monemail@gmail.com'
+            'password' => 'qfhqoqmogq048'
+        ]);
+
+        if(isset($_POST['submit'])){
+            $email = $_POST['emailpost'];
+            $password = $_POST['password'];
+        }
+    ?>
+
+<!-- Episode 7 terminé -->
