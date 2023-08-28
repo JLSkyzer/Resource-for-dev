@@ -1,0 +1,14 @@
+svg path{
+    fill: aqua;
+    stroke: #003AEA;
+    stroke-width: 5px;
+}
+
+svg{
+    width: 512px;
+    height: 512px;
+}
+
+svg path:hover{
+    fill: rgb(10, 48, 48);
+}

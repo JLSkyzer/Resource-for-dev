@@ -1,0 +1,87 @@
+<!-- Tout dabord créez la liste -->
+<div class="container">
+    <h1 id="title">Une liste pour le tuto</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rang</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+</div>
+
+<!-- Voici le code Javascript -->
+<script>
+    var tableData = [
+    {
+    "rang":1,
+    "first_name": "Alex",
+    "last_name" : "Dumont"
+    },
+    {
+    "rang":2,
+    "first_name": "Jean",
+    "last_name" : "Cule"
+    },
+    {
+    "rang":3,
+    "first_name": "Jean",
+    "last_name" : "Culpas"
+    }
+
+    ]
+
+    for (var i in tableData){
+        var row = document.createElement("tr");
+        var cellRang = document.createElement("td");
+        cellRang.textContent = tableData[i].rang;
+        var cellFirstName = document.createElement("td");
+        cellFirstName.textContent = tableData[i].first_name;
+        var cellLastName = document.createElement("td");
+        cellLastName.textContent = tableData[i].last_name;
+
+        row.appendChild(cellRang);
+        row.appendChild(cellFirstName);
+        row.appendChild(cellLastName);
+
+        var table = document.getElementById("table-body")
+        table.append(row)
+    }
+</script>
+
+<!-- Si votre Json est dans un fichier héberger -->
+<script>
+    var jsonUrl = "https://raw.githubusercontent.com/JLSkyzer/testjson/main/test.json"
+
+    fetch(jsonUrl)
+    .then(response => response.json())
+    .then(data => {
+        var tableData = data;
+
+        for (var i in tableData){
+            var row = document.createElement("tr");
+            var cellRang = document.createElement("td");
+            cellRang.textContent = tableData[i].rang;
+            var cellFirstName = document.createElement("td");
+            cellFirstName.textContent = tableData[i].first_name;
+            var cellLastName = document.createElement("td");
+            cellLastName.textContent = tableData[i].last_name;
+        
+            row.appendChild(cellRang);
+            row.appendChild(cellFirstName);
+            row.appendChild(cellLastName);
+        
+            var table = document.getElementById("table-body")
+            table.append(row)
+        }
+    })
+    .catch(error => {
+        alert("Une erreur s'est produite lors du chargement des données JSON : " + error);
+    });
+</script>

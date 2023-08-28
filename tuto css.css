@@ -648,3 +648,8 @@ transform: skew(53deg) translateX(-500px) translateY(500px); /* top right */
 transform: skew(53deg) translateX(500px) translateY(-500px); /* bottom left */
 transform: skew(53deg) translateX(500px) translateY(500px); /* bottom right */
 
+
+/* Pour débugger les érreurs de tailles */
+*{
+	box-shadow: 0 0 0 3px red inset;
+}

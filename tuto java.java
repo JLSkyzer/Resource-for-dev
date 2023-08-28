@@ -482,12 +482,6 @@ String[] basket = new String[]{"apple", "orange", "banana"};
 // ========== Définissez les objets et leurs attributs avec des classes ==========
 
 
-
-
-
-
-
-
 // Orienté Objet !
 // Exemple d'un fichier main.java et Manager.java
 
