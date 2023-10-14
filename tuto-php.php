@@ -96,7 +96,7 @@
     define('PASS', '');
 
     try{
-        $db = new PDO("mysql:host" . HOST . ";dbname=" . DB_NAME, USER, PASS);
+        $db = new PDO("mysql:host=" . HOST . ";dbname=" . DB_NAME, USER, PASS);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connect > OK !";
     }catch(PDOException $e){ //Erreur de connexion
@@ -137,7 +137,7 @@ global $db;
 ?>
 <!-- Car c'est très important ! -->
 
-Pour inséré un nouvel utilisateur
+<!-- Pour inséré un nouvel utilisateur -->
 
 <?php
 $q = $db->prepare("INSERT INTO user(email,password) VALUES(:email,:password)");
@@ -147,4 +147,157 @@ $q->execute([
 ]);
 ?>
 
-<!-- Episode 8 terminé -->
+<!-- Les mots de passe ! -->
+<!-- Au lieu d'avoir un mot de passe clair, on va faire un mot de passe crypté -->
+<!-- Au lieu de faire $_POST on va faire un truc qui va raccourcir ! -->
+<!-- ça veut dire au lieu de faire $_POST['passwordpost'] on fait juste $passwordpost -->
+<!-- Voici comment crypté -->
+<?php
+$options = [
+    'cost' => 12,
+];
+'password' => password_hash($passwordpost, PASSWORD_BCRYPT, $options)
+?>
+
+Check si l'email existe
+<?php
+$emailcheck = $db->prepare("SELECT * FROM user WHERE email = :emailRecherche");
+$emailcheck->bindParam(':emailRecherche', $emailpost);
+$emailcheck->execute();
+
+if ($emailcheck->rowCount() > 0) {
+    echo "Le string existe dans la colonne 'email'.";
+} else {
+    echo "Le string n'existe pas dans la colonne 'email'.";
+}
+?>
+
+Prendre des info à partir du mail
+
+<?php
+if ($emailcheck->rowCount() > 0) {
+    // Récupérer les données de l'utilisateur
+    $utilisateur = $emailcheck->fetch(PDO::FETCH_ASSOC);
+
+    // Maintenant, vous pouvez accéder aux données de l'utilisateur, par exemple :
+    $idUtilisateur = $utilisateur['id'];
+    $motDePasse = $utilisateur['password'];
+
+    // Vous pouvez utiliser ces données comme bon vous semble.
+    echo "ID de l'utilisateur : " . $idUtilisateur . "<br>";
+    echo "Mot de passe de l'utilisateur : " . $motDePasse;
+} else {
+    echo "Aucun utilisateur trouvé avec cette adresse email.";
+}
+?>
+
+<!-- Système d'inscription complet ! -->
+<!-- Le système de session -->
+Le système de session permet de stocker des info qu'on pourras prendre pendant la navigation de l'utilisateur, la sessions disparrait quand l'onglet se ferme.
+Voici comment démarrer la sessions, requis pour chaque page.
+<?php session_start(); ?>
+<!DOCTYPE html>
+
+Comment ajouter une valeur a la session:
+<?php $_SESSION['pseudo'] = "JLSkyzer"; ?>
+
+Voici comment bien destroy la sessions si besoin : 
+<?php
+session_unset();
+session_destroy();
+?>
+
+<!-- Système de connexion -->
+
+Voici le système de connexion / inscription fini !
+
+<?php
+    include './database.php';
+    global $db;
+    extract($_POST);
+
+    $q = $db->query("SELECT * FROM user");
+    while($user = $q->fetch()){
+        echo "id : " . $user['id'] . "<br/>";
+        echo "email : " . $user['email'] . "<br/><br/>";
+    }
+
+    $send = $db->prepare("INSERT INTO user(email,password) VALUES(:email,:password)");
+
+    $emailcheck = $db->prepare("SELECT * FROM user WHERE email = :emailRecherche");
+    $emailcheck->bindParam(':emailRecherche', $emailpost);
+    $emailcheck->execute();
+
+    if(isset($_POST['submit'])){
+        $options = [
+            'cost' => 12,
+        ];
+        $hashpass = password_hash($passwordpost, PASSWORD_BCRYPT, $options);
+        if ($emailcheck->rowCount() > 0) {
+            // Récupérer les données de l'utilisateur
+            $utilisateur = $emailcheck->fetch(PDO::FETCH_ASSOC);
+        
+            // Maintenant, vous pouvez accéder aux données de l'utilisateur, par exemple :
+            $idUtilisateur = $utilisateur['id'];
+            $motDePasse = $utilisateur['password'];
+
+            $hashcheckpass = $motDePasse;
+            if(password_verify($passwordpost, $hashcheckpass)){
+                $_SESSION["email"] = $emailpost;
+                $_SESSION["connected"] = true;
+                header("Location: account.php");
+                exit;
+            }else{
+                echo "mot de passe incorrect ! <br>";
+            }
+        } else {
+            $send->execute([
+                'email' => $emailpost,
+                'password' => $hashpass
+            ]);
+        }
+    }
+?>
+
+<!-- Les cookies -->
+Voici la base
+<?php
+// Ajouter un cookie
+setcookie('nom', 'valeur');
+setcookie('nom', "valeur", time() + (10 * 365 * 24 * 3600)); // s'expire dans 10 ans
+// Supprimer un cookie
+setcookie('nom', '', time());
+// Prendre un cookie
+echo "id : " . $_COOKIE['nom'];
+?>
+
+
+<!-- Modifier un cookie avec un script js -->
+<script>
+    themeToggle.addEventListener("change", () => {
+        if (themeToggle.checked) {
+            // Thème sombre
+            darktheme();
+            updateThemeCookie("sombre");
+        } else {
+            // Thème clair
+            whitetheme();
+            updateThemeCookie("clair");
+        }
+    });
+
+    function updateThemeCookie(theme) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "update_cookie.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send("theme=" + theme);
+    }
+</script>
+
+<!-- Le php -->
+<?php
+if (isset($_POST['theme'])) {
+    $theme = $_POST['theme'];
+    setcookie('theme', $theme, time() + (10 * 365 * 24 * 3600));
+}
+?>
