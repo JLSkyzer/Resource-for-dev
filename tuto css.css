@@ -653,3 +653,12 @@ transform: skew(53deg) translateX(500px) translateY(500px); /* bottom right */
 *{
 	box-shadow: 0 0 0 3px red inset;
 }
+
+/* Div avec background en cercle */
+
+div{
+	border-radius: 50%;
+	background:
+    radial-gradient(closest-side, #222222 79%, transparent 80% 100%),
+    conic-gradient(red, blue, red);
+}
