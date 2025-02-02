@@ -1,0 +1,26 @@
+Ajoutez ceci :
+
+// Ajoutez le répertoire local comme repository
+repositories {
+    flatDir {
+        dirs 'libs' // Assurez-vous que 'libs' est le nom du dossier où vous avez placé le .jar
+    }
+}
+
+Ensuite dans dependencies, ajouter ceci si le mod est déjà deobf:
+
+dependencies {
+    implementation files('libs/yourModName-1.0.0.jar') // Nommez votre fichier .jar correctement ici
+}
+
+Sinon : 
+
+dependencies {
+    implementation fg.deobf(files('libs/yourModName-1.0.0.jar')) // Nommez votre fichier .jar correctement ici
+}
+
+Pour ajouter plusieurs d'un coup :
+dependencies {
+    implementation fg.deobf(fileTree(dir: 'libs', include: ['*.jar']))
+}
+

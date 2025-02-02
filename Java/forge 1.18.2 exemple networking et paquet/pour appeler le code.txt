@@ -1,0 +1,2 @@
+PROJECTNAME.PACKET_HANDLER.sendToServer(new NETWORKCLASS(2, x, y, z, textstate));
+NETWORKCLASS.handleButtonAction(entity, 2, x, y, z, textstate);

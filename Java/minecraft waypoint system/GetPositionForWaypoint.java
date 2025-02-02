@@ -89,4 +89,8 @@ public class GetPositionForWaypoint {
 	public static int ARGBToInt(int a, int r, int g, int b){
 		return (a << 24) | (r << 16) | (g << 8) | b;
 	}
+
+	public static float GetScale(float wantedSize, float actualSize){
+		return wantedSize / actualSize;
+	}
 }
